@@ -21,8 +21,9 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularImc(float peso, float altura) 
 	{
-		return 0f;
-	}
+		float imc = peso / (altura * altura);
+		return imc;
+	}	
 	
 	/**
 	 * Método deve calcular a área do trapézio independente da unidade de medida.
@@ -34,7 +35,8 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularAreaTrapezio(float baseMaior, float baseMenor, float altura) 
 	{	
-		return 0f;
+		float trapezio = ((baseMaior + baseMenor) * altura) / 2;
+		return trapezio;
 	}
 	
 	/**
@@ -47,7 +49,10 @@ public class RespostaListaExercicio {
 	 */
 	public static int maiorEntreDoisInteiros(int a, int b) 
 	{
-		return 0;
+		if (a > b)
+		return a;
+		else 
+		return b;
 	}
 	
 	/**
@@ -59,7 +64,10 @@ public class RespostaListaExercicio {
 	 */
 	public static boolean verificarParImpar(int numero) 
 	{
-		return false;		
+		if (numero % 2 == 0)
+		return true;
+		else
+		return false;
 	}
 	
 	/**
@@ -69,7 +77,14 @@ public class RespostaListaExercicio {
 	 * @return media
 	 */
 	public static float calcularMediaNotas(float[] notas) {
-		return 0f;
+
+		
+		float soma = 0; 
+		for (int i = 0; i < notas.length; i++) {
+			soma = soma + notas[i];   
+		}
+		float media = soma / notas.length;
+		return media;
 	}
 	
 	/**
@@ -80,7 +95,9 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirArrayInverso(int[] array)
 	{
-		System.out.print("");
+		
+		for (int i = array.length -1; i > 0; i--)
+		System.out.print(array.length);
 	}
 	
 	/**
@@ -91,7 +108,10 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirElementosPrimos(int[] array) 
 	{
-		System.out.print("");
+		for (int i = 0; i > array.length; i++) {
+			if (array % 2 == 0)
+				System.out.print("");
+		}
 	}
 	
 	
